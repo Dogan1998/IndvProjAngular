@@ -1,0 +1,83 @@
+<div class="row">
+  <div class="col-sm-12">
+    <form [formGroup]="showForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-success" [disabled]="!showForm.valid">Save</button>
+          <!-- <button type="submit" class="btn btn-success" (click)="onSubmit()">Save</button> -->
+          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="text" id="time" formControlName="time" class="form-control">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- movie form -->
+
+      <div formGroupName="movie">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="name">Movie Name:</label>
+              <input type="text" id="name" formControlName="name" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="genre">Genre:</label>
+              <input type="text" id="genre" formControlName="genre" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="imagePath">Image path:</label>
+              <input type="text" id="imagePath" formControlName="imagePath" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="duration">Duration:</label>
+              <input type="text" id="duration" formControlName="duration" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+                  <!-- room form -->
+
+      <div formGroupName="room">
+          <div class="row">
+           <div class="col-sm-12">
+            <div class="form-group">
+                 <label for="roomname">Room Name:</label>
+              <input type="text" id="roomname" formControlName="roomname" class="form-control">
+              </div>
+                </div>
+                      </div>
+              <div class="row">
+                <div class="col-sm-12">
+                 <div class="form-group">
+                <label for="seats">Seats:</label>
+                 <input type="text" id="seats" formControlName="seats" class="form-control">
+              </div>
+                 </div>
+                  </div>
+
+           </div>
+    </form>
+  </div>
+</div>
+    

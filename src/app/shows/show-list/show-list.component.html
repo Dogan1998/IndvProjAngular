@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewShow()">New Show</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <app-show-item
+      *ngFor="let showEl of shows; let i = id"
+      [show]="showEl"
+      [id]="i"></app-show-item>
+  </div>
+</div>
+

@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-xs-12">
+      <img
+        [src]="show.movie.imagePath"
+        alt="{{ show.movie.name }}"
+        class="img-responsive"
+        style="max-height: 300px;"> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{ show.movie.name }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div
+      style="left: 400px"
+        class="btn-group"
+        appDropdown>
+        <button
+          
+          type="button"
+          class="btn btn-primary dropdown-toggle">
+          Manage Movie <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" >
+          <li><a style="cursor: pointer;" (click)="onEditShow()">Edit Movie</a></li>
+          <li><a style="cursor: pointer;" (click)="onDeleteShow()">Delete Movie</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+       <p> Genre:  {{ show.movie.genre }}</p>
+      <p> Duration: {{ show.movie.duration }} </p>
+     
+    </div>
+  </div>

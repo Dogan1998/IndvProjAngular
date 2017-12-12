@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-12">
+      <!-- <button class="btn btn-success" (click)="onNewShow()">New Show</button> -->
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-rating-item
+        *ngFor="let ratingEl of ratings; let i = id"
+        [rating]="ratingEl"
+        [id]="i"></app-rating-item>
+    </div>
+  </div>
+  
+  
